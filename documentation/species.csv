@@ -1,0 +1,18 @@
+name,particle type
+************************************************************************************************************************
+``LepE``,electrons :math:`e^-`
+``LepP``,positrons :math:`e^+`
+``LepG``,all photons :math:`\gamma`
+``HadP``,protons :math:`p^+`
+``HadN``,neutrons :math:`n`
+``NUe``,electron neutrinos :math:`\nu_\rm{e}`
+``NUeA``,anti electron neutrinos :math:`\bar{\nu}_\rm{e}`
+``NUm``,muon neutrinos :math:`\nu_\mu`
+``NUmA``,anti muon neutrinos :math:`\bar{\nu}_\mu`
+``Pi0``, neutral paions :math:`\pi^0`
+``Pim``, negative pions :math:`\pi^-`
+``Pip``, positive pions :math:`\pi^+`
+``MmL``, left-handed muons :math:`\mu^-_L`
+``MmR``, right-handed muons :math:`\mu^-_R`
+``MpR``, left-handed anti-muons :math:`\mu^+_L`
+``MpL``, right-handed anti-muons :math:`\mu^+_R`

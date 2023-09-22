@@ -1,0 +1,40 @@
+name,unit,meaning
+************************************************************************************************************************
+``R_co``,:math:`\rm{cm}`,blob-radius for AGNs / width for GRBs
+``V_co``,:math:`\rm{cm}^3`,volume of zone (preset to :math:`\frac{4}{3}\pi R_\rm{co}^3`)
+``B_co``,:math:`\rm{Gauss}`,comoving magnetic field
+------------------------------------------------------------------------------------------------------------------------
+**Time scales**
+``t_dyn_co``,:math:`\rm{s}`,comoving dynamical timescale (preset to :math:`R_\rm{co}/c`)
+``FRACt``,,fraction of dynamical timescale for timestep
+``t_adi_co``,:math:`\rm{s}`,comoving adiabatic timescale (preset to :math:`R_\rm{co}/c`)
+``FRACs``,,escape rate as a fraction of speed of light --> setting it to one means electrons free stream like neutrinos
+-----------------------------------------------------------------------------------------------------------------------
+**Injection**
+``P_jet``,:math:`\rm{erg}/\rm{s}`,power of jet
+``FRACe``,,fraction of ``Pjet`` in electrons
+``cutoff_steepness``,,:math:`\exp(-\exp(D_X \cdot` ``cutoff_steepness`` :math:`\cdot (i - imaxd)))`
+*for injection (in) = 1|2*,,*monochromatic (top hat) | power law*
+``e_inj_index``,,spectral index
+``e_inj_min``,,min. Lorentz fractor
+``e_inj_max``,,max. Lorentz fractor
+*for injection (in) = 3*,,*broken power law*
+``e_inj_idx_L``,,spectral index at lower energies
+``e_inj_idx_H``,,spectral index at higher energies
+``e_inj_m``,,min. Lorentz fractor
+``e_inj_b``,,break Lorentz fractor
+``e_inj_x``,,max. Lorentz fractor
+``FRACp``,,fraction of ``Pjet`` in protons
+*for injection (in) = 1|2|3*,,*always power law!*
+``p_inj_index``,,spectral index
+``p_inj_min``,,min. Lorentz fractor
+``p_inj_max``,,does not exist yet (max. Lorentz fractor)
+-------------------------------------------------------------------------------------------------------------------------
+**Acceleration**
+``FRACa``,,(use high value for numerical stability)
+-------------------------------------------------------------------------------------------------------------------------
+**Numerical**
+``REG``,,To prevent numerical errors because of zeros
+-------------------------------------------------------------------------------------------------------------------------
+**Other**
+``vD``,,(preset to ``1/D_X``)
