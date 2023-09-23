@@ -5,10 +5,10 @@ AM3 solves the time-dependent
 ## Code structure
 
 The user-interface module is split in a few classes:
-  * io holds the input/output options
-  * sim is the core class holding a single simulation
-  * ph is the physics manager, a helper class to collect all physics processes. It does not have to be accessed, only initialisation is required.
-  * rp holds the parameters of the simulation, such as the source details.
+  * ''io'' holds the input/output options
+  * `sim` is the core class holding a single simulation
+  * `ph` is the physics manager, a helper class to collect all physics processes. It does not have to be accessed, only initialisation is required.
+  * `rp` holds the parameters of the simulation, such as the source details.
 
 ## Run settings: Grids
 
@@ -47,18 +47,20 @@ The code calculates the time-dependent evolution of the following species:
 
 ### Accessing the particle distributions
 
-* The particle species can be accessed through get/set functions: 
+* The particle species can be accessed through get/set functions: \
     The scheme for getters is 
-    ````
-    io.Edn_dE_ + ${Internal name} + () 
-    ````
-    (for example: `io.Edn_dE_LepE()`). For setting with an array input_array use  \
-    > io.set_Edn\_dE\_ + ${Internal name} + (input\_array) 
+
+    > io.Edn\_dE\_ + ${Internal name} + () 
     
-    (for example: `io.set_Edn_dE_LepE(input_array)`). 
+    For example `io.Edn_dE_LepE()`. For setting with an array input_array use
+
+    > io.set_Edn\_dE\_ + ${Internal name} + (input\_array) 
+
+    For example `io.set_Edn_dE_LepE(input_array)`. 
     Units are 1/cm$^3$ for all.
-* Collecting *all* particles: 
-* Photons by emitting process
+* Collecting *all* particles of a species: \
+    Neutrinos may be read out as all-flavour array through `io.Edn_dE_Nu()`
+* Photons by emitting process: \
 
 ## Source parameters
 
@@ -83,3 +85,9 @@ The following physics processes are included:
 **Notes**: (1) Due to their short lifetime, neutral pions are assumed to decay instantaneously. We hence don't list a neutral pion but a photon source term for photo-pion production. (2) Injection here refers to the build-in injection. Arbitrary injection is possible by passing arrays. 
 
 ### Accessing timescales
+
+Particle timescales can be accessed through  
+
+> io.t\_ + ${Particle internal name} + \_ + ${Process abbreviation}
+
+
