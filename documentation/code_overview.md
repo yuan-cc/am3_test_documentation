@@ -4,7 +4,7 @@ To evolve number densities $n$ as a function of time $t$ AM3 solves the time-dep
 
 $$ \partial_{t}n(E,t)=-\partial_{E} \dot{E}({E,t})n(E,t)-\alpha(E,t) n(E,t)+Q(E,t) $$
 
-It thus accounts for cooling \[$\dot{E}(E,t)$\], escape/sink \[$\alpha(E,t)$\] and injection/source \[$Q(E,t)$\].
+It thus accounts for cooling [ $\dot{E}(E,t)$ ], escape/sink \[ $\alpha(E,t)$ \] and injection/source \[$Q(E,t)$\].
 
 
 ## Code structure
