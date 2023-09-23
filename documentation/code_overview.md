@@ -4,7 +4,7 @@ To evolve number densities $n$ as a function of time $t$ AM3 solves the time-dep
 
 $$ \partial_{t}n(E,t)=-\partial_{E} \dot{E}({E,t})n(E,t)-\alpha(E,t) n(E,t)+Q(E,t) $$
 
-It thus accounts for cooling [ $\dot{E}(E,t)$ ], escape/sink \[ $\alpha(E,t)$ \] and injection/source \[$Q(E,t)$\].
+It thus accounts for cooling [ $\dot{E}(E,t)$ ], escape/sink [ $\alpha(E,t)$ ] and injection/source [ $Q(E,t)$  ].
 
 
 ## Code structure
@@ -75,17 +75,17 @@ The code calculates the time-dependent evolution of the following species:
 
 The following physics processes are included: 
 
-|Process                |Abbreviation   | Terms entering the differential equations                         |
-|--------               | ------------  | ------------------------------                                    |   
-|Synchrotron            | sy            | $Q_\gamma$, $\alpha_\gamma$, $\dot{E}$ for all charged particles  |
-|Inverse Compton        | ic            | $Q_\gamma$, $\alpha_\gamma$, $\dot{E}$ for all charged particles  |
-|Photo-pair production  | bh            | $\dot{E}_p$, $Q_e^{\pm}$                                          |
-|Photo-pion production  | pg            | $\alpha_{\gamma}$, $\alpha_p$, $Q_\pi^{\pm}$, $Q_\gamma$          |
-|Adiabatic expansion    | ad            | $\alpha$ for all particles, $\dot{E}$ for all charged particles  |
-|Escape                 | es            | $\alpha$ for all particles                                       |
-|Pion decay             | dec           | $\alpha_{\pi^\pm}$, $Q_{\mu^\pm}$, $Q_{\nu_\mu}$                  |
-|Muon decay             | dec           | $\alpha_{\mu^\pm}$, $Q_{e^\pm}$, $Q_{\nu_\mu}$, $Q_{\nu_e}$       |
-|Injection              | inj           | $Q_{e^{-}}$, $Q_p$                                                |
+|Process                |Abbreviation   | Terms entering the differential equations                             |
+|--------               | ------------  | ------------------------------                                        |   
+|Synchrotron            | sy            | $Q_\gamma$, $\alpha_\gamma$, $\dot{E}$ for all charged particles      |
+|Inverse Compton        | ic            | $Q_\gamma$, $\alpha_\gamma$, $\dot{E}$ for all charged particles      |
+|Photo-pair production  | bh            | $\dot{E}_p$, $Q_{e^{\pm}}$                                            |
+|Photo-pion production  | pg            | $\alpha_{\gamma}$, $\alpha_p$, $Q_{\pi^\pm}$, $Q_\gamma$              |
+|Adiabatic expansion    | ad            | $\alpha$ for all particles, $\dot{E}$ for all charged particles       |
+|Escape                 | es            | $\alpha$ for all particles                                            |
+|Pion decay             | dec           | $\alpha_{\pi^\pm}$, $Q_{\mu^\pm}$, $Q_{\nu_\mu}$                      |
+|Muon decay             | dec           | $\alpha_{\mu^\pm}$, $Q_{e^\pm}$, $Q_{\nu_\mu}$, $Q_{\nu_e}$           |
+|Injection              | inj           | $Q_{e^{-}}$, $Q_p$                                                    |
 
 **Notes**: (1) Due to their short lifetime, neutral pions are assumed to decay instantaneously. We hence don't list a neutral pion but a photon source term for photo-pion production. (2) Injection here refers to the build-in injection. Arbitrary injection is possible by passing arrays. 
 
