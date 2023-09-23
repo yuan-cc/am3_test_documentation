@@ -53,8 +53,7 @@ The code calculates the time-dependent evolution of the following species:
     io.Edn_dE_ + ${Internal name} + () 
     ````
     (for example: `io.Edn_dE_LepE()`). For setting with an array input_array use \
-    `io.set_Edn_dE_ + ${Internal name} + (input_array)` 
-    \ 
+    io.set_Edn_dE_ + ${Internal name} + (input_array)\ 
     (for example: `io.set_Edn_dE_LepE(input_array)`). 
     Units are 1/cm$^3$ for all.
 * Collecting *all* particles: 
