@@ -10,10 +10,11 @@ It thus accounts for cooling [ $\dot{E}(E,t)$ ], escape/sink [ $\alpha(E,t)$ ] a
 ## Code structure
 
 The user-interface module is split in a few classes:
-  * ''io'' holds the input/output options
-  * `sim` is the core class holding a single simulation
-  * `ph` is the physics manager, a helper class to collect all physics processes. It does not have to be accessed, only initialisation is required.
-  * `rp` holds the parameters of the simulation, such as the source details.
+  * 'SimulationManager' is the core class holding a single simulation. Objects of this class will be referred to as 'sim'.
+  * 'PhysicsHandler' is the physics manager, a helper class to collect all physics processes. It does not have to be accessed, only initialisation is required. Objects of this class will be referred to as 'ph'.
+  * 'RunParams' holds the parameters of the simulation, such as the source details. Objects of this class will be referred to as 'rp'.
+  * 'AM3Arrays' holds the data arrays during the simulation. It does not have to be accessed, only initialisation is required. Objects of this class will be referred to as 'dat'
+  * 'IO' contains the input/output possibilities. Objects of this class will be referred to as 'io'.
 
 ## Run settings: Grids
 
@@ -21,12 +22,12 @@ Code-internal we differentiate between three energy grids: The lepton ($e^\pm$),
 Grid parameters and access:
 * *Definition of energy grids* is done in include/AM3/global_defs.h .
     Photon grid length is defined by BIN_X, photon grid origin X_I. The other grid lengths are derived: BIN_E = BIN_X + X_I, BIN_P = BIN_E - 26. Grid spacing D_X = 0.1 (in e base) is not be changed, as this would lead to erroneous results.
-* *Readout of grids* is via class io:
+* *Readout of grids* is via object io of class IO:
     1. Grid parameters: `io.dlnE()` [Grid spacing in ln-space], `io.NLepE()` [number of electron grid points], `io.NLepG()` [number of photon grid points], `io.NHad()` [number of hadronic grid points], `io.NNU()` [number of neutrino grid points] 
     2. Grids in eV: `io.E_LepE_eV()` [array of electron grid], `io.E_LepG_eV()` [array of photon grid], `io.E_Had_eV()` [array of hadronic grid], `io.E_Nu_eV()` [array of neutrino grid]
     3. For conversion of energy in eV to gridpoint, users may rely on `io.EeV2i_LepE()` / `io.EeV2i_LepG()` / `io.EeV2i_Had()` / `io.EeV2i_Nu()`
 
-In contrast to the energy grid, the time step may be adjusted dynamically and is accessible through the parameter `rp.dt` (in s). 
+In contrast to the energy grid, the time step may be adjusted dynamically and is accessible through the parameter "dt" of the class RunParams, thus `rp.dt` (in s). 
 
 ## Particle species
 
@@ -51,6 +52,8 @@ The code calculates the time-dependent evolution of the following species:
 | Election anti-neutrinos   | $\bar{\nu}_e$     | NueA          |
 
 ### Accessing the particle distributions
+
+Access is implemented through the IO class (with corresponding object io):
 
 * The particle species can be accessed through get/set functions: \
     The scheme for getters is 
