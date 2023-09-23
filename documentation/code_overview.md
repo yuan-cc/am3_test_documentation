@@ -1,6 +1,11 @@
 # Code overview
 
-AM3 solves the time-dependent 
+To evolve number densities $n$ as a function of time $t$ AM3 solves the time-dependent partial differential equations of the form
+
+$$ \partial_{t}n(E,t)=-\partial_{E} \dot{E}({E,t})n(E,t)-\alpha(E,t) n(E,t)+Q(E,t) $$
+
+It thus accounts for cooling \[$\dot{E}(E,t)$\], escape/sink \[$\alpha(E,t)$\] and injection/source \[$Q(E,t)$\].
+
 
 ## Code structure
 
@@ -15,7 +20,7 @@ The user-interface module is split in a few classes:
 Code-internal we differentiate between three energy grids: The lepton ($e^\pm$), photon ($\gamma$) and hadronic (all other particles) ones; all equally spaced in logarithmic space (base e). The grid settings are specified during compilation and thus cannot be changed during runtime. 
 Grid parameters and access:
 * *Definition of energy grids* is done in include/AM3/global_defs.h .
-    Photon grid length is defined by BIN_X, photon grid origin X_I. The other grid lengths are derived: BIN_E = BIN_X + X_I, BIN_P = BIN_E - 26. Grid spacing D_X = 0.1 (in e base) should not be changed, it will lead to erroneous results
+    Photon grid length is defined by BIN_X, photon grid origin X_I. The other grid lengths are derived: BIN_E = BIN_X + X_I, BIN_P = BIN_E - 26. Grid spacing D_X = 0.1 (in e base) is not be changed, as this would lead to erroneous results.
 * *Readout of grids* is via class io:
     1. Grid parameters: `io.dlnE()` [Grid spacing in ln-space], `io.NLepE()` [number of electron grid points], `io.NLepG()` [number of photon grid points], `io.NHad()` [number of hadronic grid points], `io.NNU()` [number of neutrino grid points] 
     2. Grids in eV: `io.E_LepE_eV()` [array of electron grid], `io.E_LepG_eV()` [array of photon grid], `io.E_Had_eV()` [array of hadronic grid], `io.E_Nu_eV()` [array of neutrino grid]
@@ -40,7 +45,7 @@ The code calculates the time-dependent evolution of the following species:
 | Right-handed anti-muons   | $\mu^+_R$         | MpR           |
 | Positive pions            | $\pi^+$           | Pip           |
 | Negatie pions             | $\pi^-$           | Pim           |
-| Muon neutrinos            | $\nu_\mu$         | Num           |
+| Muon neutrinos            | $\nu_{\mu}$       | Num           |
 | Muon anti-neutrinos       | $\bar{\nu}_\mu$   | NumA          |
 | Electon neutrinos         | $\nu_e$           | Nue           |
 | Election anti-neutrinos   | $\bar{\nu}_e$     | NueA          |
@@ -86,8 +91,13 @@ The following physics processes are included:
 
 ### Accessing timescales
 
-Particle timescales can be accessed through  
+Particle timescales (in s) can be accessed through  
 
 > io.t\_ + ${Particle internal name} + \_ + ${Process abbreviation}
+
+For example `io.t_LepE_sy()`. \
+In addition to the processes listed above it is possible to retrieve the acceleration timescale for electrons and protons.
+
+### Injection of arbitrary distributions
 
 
