@@ -32,16 +32,16 @@ release = '1.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "nbsphinx",
-    "recommonmark",
+    #"nbsphinx",
+    #"recommonmark",
     "sphinx.ext.autodoc",
     "sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
     "sphinx_gallery.load_style",
-    "myst_parser",
-    "sphinx_rtd_dark_mode",
+    #"myst_parser",
+    #"sphinx_rtd_dark_mode",
 ]
 
 napoleon_google_docstring = True
