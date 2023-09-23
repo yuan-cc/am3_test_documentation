@@ -1,0 +1,4 @@
+ipython
+pybind11
+numpy
+sphinx_rtd_dark_mode
