@@ -39,7 +39,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
-    "sphinx_gallery.load_style",
+    #"sphinx_gallery.load_style",
     #"myst_parser",
     #"sphinx_rtd_dark_mode",
 ]
