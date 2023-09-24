@@ -1,9 +1,7 @@
-Installing pyAM3
-----------------
-This is a tutorial for Ubuntu 18.04.
+# Installing pyAM3
 
-Prerequisites:
-==============
+
+## Prerequisites:
 
 1. python3
     - numpy
@@ -17,8 +15,7 @@ Prerequisites:
 3. make
 
 
-Making AM3:
-===========
+## Making AM3:
 
 1. Check if the paths in the AM3 Makefile are correct. I used the following:
 
@@ -32,8 +29,8 @@ Making AM3:
     in your AM3 folder: :code:`libpython/lib/pybind_core.so`
 
 
-Importing pyAM3 to Python:
-==========================
+## Importing pyAM3 to Python:
+
 It is important to add two paths to your :code:`PYTHONPATH` or
 append it at the beginning of your program:
 

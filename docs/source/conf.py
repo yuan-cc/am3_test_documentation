@@ -10,20 +10,19 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../../libpython/'))
-print("PYTHONPATH:")
-print(sys.path)
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('.'))
+
 
 # -- Project information -----------------------------------------------------
 
-project = 'pyAM3'
-copyright = '2020, Shan Gao, Marc Klinger, Xavier Rodrigues, Annika Rudolph'
-author = 'Shan Gao, Marc Klinger, Xavier Rodrigues, Annika Rudolph'
+project = 'AM3 test documentation'
+copyright = '2023, Annika'
+author = 'Annika'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.0'
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,24 +30,12 @@ release = '1.0.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    #"nbsphinx",
-    #"recommonmark",
-    "sphinx.ext.autodoc",
-    "sphinx.ext.mathjax",
-    "sphinx.ext.viewcode",
-    "sphinx.ext.githubpages",
-    "sphinx.ext.napoleon",
-    #"sphinx_gallery.load_style",
-    #"myst_parser",
-    #"sphinx_rtd_dark_mode",
-]
-
-napoleon_google_docstring = True
-napoleon_use_param = False
-
-
-default_dark_mode = True
+extensions = [	'myst_parser', 
+				'sphinx.ext.mathjax',
+			    "sphinx.ext.napoleon",
+			    "sphinx.ext.autodoc",
+			    #'m2r2',
+			    ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -65,26 +52,8 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'alabaster'
-html_theme_options = {
-    "fixed_sidebar": "true",
-    "sidebar_collapse": "false",
-    "show_relbars": "false"
-}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-
-# This can be used to import all module's members docstrings but not the
-# module's own one
-# does not work
-'''
-def remove_module_docstring(app, what, name, obj, options, lines):
-    if what == "module" and name == "AM3" and 'members' in options:
-        del lines[:]
-
-def setup(app):
-    app.connect("autodoc-process-docstring", remove_module_docstring)
-'''
