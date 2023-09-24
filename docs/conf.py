@@ -34,8 +34,14 @@ extensions = [	'myst_parser',
 				'sphinx.ext.mathjax',
 			    "sphinx.ext.napoleon",
 			    "sphinx.ext.autodoc",
-			    #'m2r2',
-			    ]
+ 				"sphinx_rtd_dark_mode",
+			]
+
+napoleon_google_docstring = True
+napoleon_use_param = False
+
+
+default_dark_mode = True
 
 source_suffix = [
     ".md",
