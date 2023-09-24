@@ -4,3 +4,9 @@ numpy
 sphinx_rtd_dark_mode
 myst_parser
 sphinx.ext.mathjax
+rtds_action
+better_apidoc
+sphinx-gallery<0.11
+docutils
+nbsphinx
+cython
