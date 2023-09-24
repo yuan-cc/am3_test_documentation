@@ -30,7 +30,7 @@ release = '1.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [	'recommonmark', 
+extensions = [	'myst_parser', 
 				'sphinx.ext.mathjax',
 			    "sphinx.ext.napoleon",
 			    "sphinx.ext.autodoc",
@@ -43,16 +43,15 @@ napoleon_use_param = False
 
 default_dark_mode = True
 
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-
 source_suffix = [
     ".md",
     ".rst",
     ".txt",
+]
+
+myst_enable_extensions = [
+    "amsmath",
+    "dollarmath",
 ]
 
 sphinx_gallery_conf = {
