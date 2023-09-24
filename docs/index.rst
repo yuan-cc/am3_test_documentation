@@ -17,13 +17,15 @@ Among the state-of-the-art multi-messenger simulation tools [see Cerruti et al P
 
 In this open-source release, we are making AM3 available with all its current features. The solver consists of a C++ library that can be compiled and deployed directly. Alternatively, we provide Python users with an interface that allows you to compile a shared library exposing all of AM3's high-level functions to Python 3. This means you can run simulations with AM3 in pure Python without any significant loss of efficiency.
 
+If you are using AM3, please cite the following reference:
+
+
+
 (Inextensive) list of papers based on AM3:
 ------------------------------------------
 .. include:: list_of_papers.txt
 
 
-Contents
---------
 .. toctree::
    :maxdepth: 2
    :hidden:

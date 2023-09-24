@@ -37,6 +37,12 @@ extensions = [	'myst_parser',
 			    #'m2r2',
 			    ]
 
+source_suffix = [
+    ".md",
+    ".rst",
+    ".txt",
+]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

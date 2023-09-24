@@ -1,0 +1,4 @@
+#Exclude documentation builds from git
+docs/build/
+docs/_static/
+docs/_templates/

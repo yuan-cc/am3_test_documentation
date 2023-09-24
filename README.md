@@ -31,6 +31,7 @@ In this open-source release, we are making AM3 available with all its current fe
 
 A detailed user guide can be found under [am3.readthedocs.io](https://am3.readthedocs.io). 
 
+If you use AM3 for you project, please cite 
 # Quickstart
 
 
@@ -73,8 +74,3 @@ The directory `examples/examples_in_python` contains Jupyter notebooks each cont
 
 
 # List of papers based on AM3
- - Gao et al, Nature Astron. 3 (2019)
- - Rodrigues et al. ApJ Lett. 874 (2019)
- - Rodrigues et al ApJ 912 (2021)
- - Rudolph et al ApJL
- - Rudolph et al ApJ
