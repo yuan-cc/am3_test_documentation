@@ -1,24 +1,32 @@
-# Installing AM3
+# Installation
 
 AM3 can be installed either through docker or by compiling the code yourself.
 
 ## Docker
 
+[Gaetan, can you insert some info here please]
+
 ## Compiling yourself
+
+Alternatively, you can compile the code yourself. Note that here we discuss the procedure for compiling shared python library as interface to the code; If you would like to use the code directly in its native language C++, see [addref]. 
+
+Due to library dependencies we stronlgy recommend compiling and using in the same environment! 
+This implies *(a)* compiling on the machine (or laptop) that you want to use it on, ideally *(b)* also in the same python environment. 
+The latter can be realised by creating a fixed conda environment 
 
 ### Prerequisites:
 
 1. python3
-    - pybind11
+    - pybind11: install e.g. through conda `sudo conda install pybind11`
 
 2. g++
-    - gsl library: `sudo apt install libgsl-dev`
+    - gsl library: install e.g. through your standard package manager (apt/dnf/...) using `sudo apt install libgsl-dev`
 
 3. make
 
 ### Making AM3:
 
-1. Check if the paths in the AM3 Makefile are correct. I used the following:
+1. Adjust the paths in the makefile
 
     ````
     PYTHON_BASE = $(shell python -c "import sys; print(sys.base_prefix)")
@@ -28,10 +36,10 @@ AM3 can be installed either through docker or by compiling the code yourself.
     ````
     
 2. Run `make` to compile and link AM3. This will create the library
-    in your AM3 folder: `libpython/lib/pybind_core.so`
+    in the relative folder  `libpython/lib/pybind_core.so`
 
 
 ### Importing the library in python:
 
-In order to use the library, add its path ``AM3/libpython/lib`` your `PYTHONPATH` or
+In order to use the library add its path ``AM3/libpython/lib`` your `PYTHONPATH` or
 append it at the beginning of your program.

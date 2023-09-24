@@ -1,3 +1,3 @@
 # Quickstart
 
-Let's walk through a simple AGN run with AM3
+Let's walk through a simple AGN run with AM3! 

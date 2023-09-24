@@ -7,7 +7,6 @@ Welcome to the AM3 (Astrophysical Multi-Messenger Modeling) Software!
 =====================================================================
 
 .. image:: ./media/logo.png
-.. math::
 
 AM3 is a software package for simulating lepto-hadronic interactions in astrophysical environments.
 It solves the time-dependent partial differential equations for the energy spectra of electrons, positrons, protons, neutrons, photons, neutrinos as well as charged secondaries (pions and muons), immersed in an isotropic magnetic field. Crucially, it accounts for the fact that photons and charged secondaries emitted in electromagnetic and hadronic interactions feed back into the interaction rates in a time-dependent manner, therefore grasping non-linear effects including electromagnetic cascades. 
@@ -31,8 +30,8 @@ If you are using AM3, please cite the following reference:
    :maxdepth: 2
    :hidden:
 
-   quickstart.md
    installAM3.md
+   quickstart.md
    code_overview.md
    processes_details.md
    running_from_cpp.md
