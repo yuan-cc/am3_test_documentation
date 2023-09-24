@@ -1,4 +1,5 @@
 myst_parser
+recommonmark
 ipython
 rtds_action
 pybind11
