@@ -4,7 +4,6 @@ rtds_action
 pybind11
 numpy
 sphinx_rtd_dark_mode
-sphinx.ext.mathjax
 better_apidoc
 sphinx-gallery<0.11
 docutils
