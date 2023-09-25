@@ -36,7 +36,8 @@ extensions = [	'myst_parser',
 			    "sphinx.ext.autodoc",
  				"sphinx_rtd_dark_mode",
  				'sphinx.ext.autosectionlabel',
-			]
+ 				"nbsphinx"
+ 			]
 
 napoleon_google_docstring = True
 napoleon_use_param = False

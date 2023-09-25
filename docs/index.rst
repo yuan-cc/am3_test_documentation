@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+*********************************************************************
 Welcome to the AM3 (Astrophysical Multi-Messenger Modeling) Software!
-=====================================================================
+*********************************************************************
 
 .. image:: ./media/logo.png
 
@@ -22,7 +23,7 @@ If you are using AM3, please cite the following reference:
 
 
 (Inextensive) list of papers based on AM3:
-------------------------------------------
+******************************************
 .. include:: list_of_papers.txt
 
 
@@ -31,8 +32,9 @@ If you are using AM3, please cite the following reference:
    :hidden:
 
    installAM3.md
-   quickstart.md
+   examples/simple_example
    code_overview.md
    processes_details.md
+   examples/detailed_example
    running_from_cpp.md
 
