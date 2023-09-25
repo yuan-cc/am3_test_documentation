@@ -1,6 +1,9 @@
 # Welcome to the AM3 (Astrophysical Multi-Messenger Modeling) Software!
 
-![](docs/media/logo.png)
+<p align="center">
+  <img src="docs/media/logo.png" />
+</p>
+
 
 
 # Overview
