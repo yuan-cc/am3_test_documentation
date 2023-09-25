@@ -1,5 +1,8 @@
 # Welcome to the AM3 (Astrophysical Multi-Messenger Modeling) Software!
 
+![](docs/media/logo.png)
+
+
 # Overview
 
 AM3 is a software package for simulating lepto-hadronic interactions in astrophysical environments.
