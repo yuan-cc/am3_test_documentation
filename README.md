@@ -128,6 +128,4 @@ The directory `examples/examples_in_python` contains Jupyter notebooks each cont
 
 
 # List of papers based on AM3
-```{eval-rst}
-.. include:: docs/list_of_papers.rst
-```
+docs/list_of_papers.md

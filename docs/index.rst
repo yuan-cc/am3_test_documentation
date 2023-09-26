@@ -28,8 +28,8 @@ If you are using AM3, please cite the following reference:
 
 (Inextensive) list of papers based on AM3:
 ******************************************
-.. include:: list_of_papers.txt
-
+.. include:: list_of_papers.md
+   :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 2
