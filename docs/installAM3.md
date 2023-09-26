@@ -1,20 +1,14 @@
 # Installation
 
-AM3 can be installed either through docker or by compiling the code yourself.
-
-## Docker
-
-[Gaetan, can you insert some info here please]
-
-## Compiling yourself
-
-Alternatively, you can compile the code yourself. Note that here we discuss the procedure for compiling shared python library as interface to the code; If you would like to use the code directly in its native language C++, see [addref]. 
+AM3 can be installed either through docker or by compiling the code yourself. 
+Here we describe how to run compile the code yourself and import it into python,
+for [this page](sec_run_with_docker) for running using docker or [this page](sec_run_with_c++)  for running directly in C++.
 
 Due to library dependencies we stronlgy recommend compiling and using in the same environment! 
 This implies *(a)* compiling on the machine (or laptop) that you want to use it on, ideally *(b)* also in the same python environment. 
 The latter can be realised by creating a fixed conda environment 
 
-### Prerequisites:
+## Prerequisites:
 
 1. python3
     - pybind11: install e.g. through conda `sudo conda install pybind11`
@@ -24,7 +18,7 @@ The latter can be realised by creating a fixed conda environment
 
 3. make
 
-### Making AM3:
+## Making AM3:
 
 1. Adjust the paths in the makefile
 
@@ -39,7 +33,7 @@ The latter can be realised by creating a fixed conda environment
     in the relative folder  `libpython/lib/pybind_core.so`
 
 
-### Importing the library in python:
+## Importing the library in python:
 
 In order to use the library add its path ``AM3/libpython/lib`` your `PYTHONPATH` or
 append it at the beginning of your program.

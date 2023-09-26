@@ -1,3 +1,4 @@
+(sec_run_with_c++)=
 # Running from C++
 
 Naturally written in C++, the code can also be run directly through C++.

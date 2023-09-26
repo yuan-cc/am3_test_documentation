@@ -1,4 +1,4 @@
-# Code overview
+# Code details
 
 To evolve number densities $n$ as a function of time $t$ AM3 solves the time-dependent partial differential equations of the form
 

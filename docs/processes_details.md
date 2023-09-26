@@ -1,4 +1,4 @@
-# Physics processes details: swichtes and options for speed optimization
+# Physics processes details: List of switches
 
 ## Switches and options by process
 
