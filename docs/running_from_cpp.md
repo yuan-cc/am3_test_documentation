@@ -144,5 +144,9 @@ clean:
 
 With ```TestAM3withCpp``` and ```TestAM3withCpp.cc``` in the AM3 root directory, one can compile and run the C++ code with the shell command
 ```
-$make -f Makefile_CPP && ./TestAM3withCpp 
+$ make -f Makefile_CPP && ./TestAM3withCpp
+```
+The object files can be removed by running
+```
+$ make clean -f Makefile_CPP
 ```
