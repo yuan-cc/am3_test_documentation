@@ -6,4 +6,4 @@ As the python binding is a direct mapping of functions, the functions/parameters
 
 Nonetheless we here give a simple example.
 
-One can run AM3 with C++ by creating a C++ script, for example 'TestAM3withCpp.cc', and a `Makefile_CPP' in the Am3 root directry. 
+One can run AM3 with C++ by creating a C++ script, for example 'TestAM3withCpp.cc', and a ```Makefile_CPP``` in the Am3 root directry. 
