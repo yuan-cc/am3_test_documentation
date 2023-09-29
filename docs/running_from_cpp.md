@@ -141,3 +141,8 @@ clean:
 	rm -f $(PATH_TO_MAIN)/TestAM3withCpp.o $(AM3_OBJS) 
 
 ```
+
+With ```TestAM3withCpp``` and ```TestAM3withCpp.cc``` in the AM3 root directory, one can compile and run the C++ code with the shell command
+```
+$make -f Makefile_CPP && ./TestAM3withCpp 
+```
