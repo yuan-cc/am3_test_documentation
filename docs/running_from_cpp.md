@@ -109,7 +109,6 @@ Here is an example
 ```make
 PATH_TO_MAIN = .
 PATH_TO_AM3 = .
-PATH_TO_Astro = ./AstroSources
 
 CPP = c++
 
@@ -121,7 +120,7 @@ CPPFLAGS2 = -fPIC -O4 -std=c++11 -lgsl -lgslcblas
 PATH_TO_EIGEN = $(PATH_TO_AM3)/libEigen
 
 # Linking flags for compiling shared library
-INCLU = -I$(PATH_TO_AM3)/include -I$(PATH_TO_EIGEN) -I$(PATH_TO_Astro)/include 
+INCLU = -I$(PATH_TO_AM3)/include -I$(PATH_TO_EIGEN)
 
 # AM3 modules
 AM3_SRCS = $(wildcard $(PATH_TO_AM3)/src/*.cc)
@@ -134,7 +133,7 @@ $(PATH_TO_AM3)/src/%.o : $(PATH_TO_AM3)/src/%.cc
 
 all : $(PATH_TO_MAIN)/TestAM3withCpp
 
-$(PATH_TO_MAIN)/TestAM3withCpp : $(Astro_OBJS)  $(PATH_TO_MAIN)/TestAM3withCpp.o $(AM3_OBJS) 
+$(PATH_TO_MAIN)/TestAM3withCpp : $(PATH_TO_MAIN)/TestAM3withCpp.o $(AM3_OBJS) 
 	$(CPP) $(PATH_TO_MAIN)/TestAM3withCpp.o $(AM3_OBJS) -o $(PATH_TO_MAIN)/TestAM3withCpp $(CPPFLAGS2)
 
 $(PATH_TO_MAIN)/TestAM3withCpp.o : $(PATH_TO_MAIN)/TestAM3withCpp.cc
